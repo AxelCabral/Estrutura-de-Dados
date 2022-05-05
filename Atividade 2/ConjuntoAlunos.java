@@ -1,5 +1,3 @@
-package arranjos1ED;
-
 public class ConjuntoAlunos {
     private Aluno[] alunos = new Aluno[10];
     private int totalAlunos = 0;

@@ -1,5 +1,3 @@
-package arranjos1ED;
-
 public class main{
     public static void main(String[] args) {
 

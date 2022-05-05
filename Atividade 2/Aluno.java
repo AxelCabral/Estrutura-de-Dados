@@ -1,5 +1,3 @@
-package arranjos1ED;
-
 public class Aluno {
    private String nome;
    private int idade;
