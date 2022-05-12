@@ -1,4 +1,4 @@
-public class main{
+public class Main{
     public static void main(String[] args) {
 
         Aluno a1 = new Aluno("Axel", 20, 10.0f);
