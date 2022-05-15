@@ -1,3 +1,5 @@
+package atividade_3;
+
 public class Aluno {
     private String nome;
    private int idade;

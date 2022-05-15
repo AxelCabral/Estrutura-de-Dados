@@ -1,4 +1,6 @@
-public class Vetor {
+package atividade_2;
+
+public class ConjuntoAlunos {
     private Aluno[] alunos = new Aluno[10];
     private int totalAlunos = 0;
 
@@ -18,5 +20,5 @@ public class Vetor {
             }
         }
         return false;
-    } 
+    }
 }

@@ -1,3 +1,5 @@
+package atividade_1;
+
 public class PontoC {
     private double x;
     private double y;
