@@ -16,7 +16,7 @@ public class Main {
             System.out.println("O Aluno está no sistema");
         }
         else{
-            System.out.println("O Aluno está no sistema");
+            System.out.println("O Aluno não está no sistema");
         }
     }
 }

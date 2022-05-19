@@ -16,7 +16,7 @@ public class ConjuntoAlunos {
 
     public boolean contem(Aluno a1){
         for(int i=0; i<this.totalAlunos; i++){
-            if(a1 == this.alunos[i]){
+            if(this.alunos[i] == a1){
                 return true;
             }
         }
@@ -40,16 +40,16 @@ public class ConjuntoAlunos {
         }
     }
 
-    public boolean remove(Aluno a2){
+    public boolean remove(Aluno a){
         int indice = -1;
         for(int i=0;i<totalAlunos;i++){
-            if(a2 == this.alunos[i]){
+            if(a == this.alunos[i]){
                 indice = i;
                 break;
             }
         }
         if(indice != -1){
-            for(int i=0;i<totalAlunos-1;i++){
+            for(int i=indice;i<(totalAlunos-1);i++){
                 alunos[i] = alunos[i+1];
             }
             totalAlunos--;
