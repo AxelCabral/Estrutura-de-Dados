@@ -1,7 +1,7 @@
 package atividade_5;
 
 public class Noh {
-    private Object info; //este exemplo armazena números inteiros
+    private Object info;
     private Noh prox;
     
     public Noh (Object info){
@@ -9,8 +9,14 @@ public class Noh {
     this.prox = null;
     }
     
-    public Object getInfo() { }
-    public Noh getProx(){ }
-    
-    public Noh setProx(Noh n) { this.prox = n; }
+    public Object getInfo(){
+        return this.info;
     }
+    public Noh getProx(){
+        return this.prox;
+    }
+    
+    public void setProx(Noh n){ 
+        this.prox = n; 
+    }
+}

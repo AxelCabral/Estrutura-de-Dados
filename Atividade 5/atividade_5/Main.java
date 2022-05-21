@@ -6,6 +6,9 @@ public class Main {
         l.insereInicio(5);
         l.insereInicio(10);
         l.insereFim(7);
-        l.remove(10);
+        l.remove(5);
+        l.imprime();
+        System.out.println(l.estaVazia());
+        System.out.println(l.tamanho());
     }
 }
