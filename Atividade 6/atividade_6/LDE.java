@@ -60,9 +60,9 @@ public class LDE implements Lista {
         ant = p;
         p = p.getProx();
         }
-        if (p==null) // não achou, então não faz nada e retorna false
+        if (p==null)
         return false;
-        if (ant==null) //retira info do início
+        if (ant==null)
         inicio = p.getProx();
         else
         ant.setProx(p.getProx());
