@@ -1,17 +1,17 @@
-package atividade_6;
+package atividade6_1;
 
 public class Noh {
-    private Object info;
+    private int info;
     private Noh ant;
     private Noh prox;
     
-    public Noh (Object info){
+    public Noh (int info){
         this.info = info;
         this.ant = null;
         this.prox = null;
     }
     
-    public Object getInfo(){
+    public int getInfo(){
         return this.info;
     }
     public Noh getProx(){

@@ -1,4 +1,4 @@
-package atividade_6;
+package atividade6_2;
 
 public interface Lista {
     public void insereInicio(Object info);

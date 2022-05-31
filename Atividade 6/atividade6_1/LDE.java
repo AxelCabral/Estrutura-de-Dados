@@ -1,4 +1,4 @@
-package atividade_6;
+package atividade6_1;
 
 public class LDE implements Lista {
     private Noh inicio;
@@ -9,7 +9,7 @@ public class LDE implements Lista {
         this.fim = null;
     }
 
-    public void insereInicio(Object info) {
+    public void insereInicio(int info) {
         Noh novo = new Noh(info);
         if (inicio == null){
             inicio = novo;
@@ -37,7 +37,7 @@ public class LDE implements Lista {
         return i;
     }
 
-    public void insereFim(Object info) {
+    public void insereFim(int info) {
         Noh novo = new Noh(info);
         Noh ultimo;
         ultimo = null;
@@ -52,7 +52,7 @@ public class LDE implements Lista {
         }
     }
 
-    public boolean remove(Object info) {
+    public boolean remove(int info) {
         Noh ant, p;
         p = inicio;
         ant = null;
@@ -60,12 +60,15 @@ public class LDE implements Lista {
         ant = p;
         p = p.getProx();
         }
-        if (p==null)
-        return false;
-        if (ant==null)
-        inicio = p.getProx();
-        else
-        ant.setProx(p.getProx());
+        if (p==null){
+            return false;   
+        }
+        if (ant==null){
+            inicio = p.getProx();
+        }
+        else{
+            ant.setProx(p.getProx());
+        } 
         return true;
     }
 

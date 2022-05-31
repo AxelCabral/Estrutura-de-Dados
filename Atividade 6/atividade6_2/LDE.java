@@ -1,10 +1,12 @@
-package atividade_5;
+package atividade6_2;
 
-public class LSE implements Lista {
+public class LDE implements Lista {
     private Noh inicio;
+    private Noh fim;
     
-    public LSE (){
+    public LDE (){
         this.inicio = null;
+        this.fim = null;
     }
 
     public void insereInicio(Object info) {
@@ -27,26 +29,28 @@ public class LSE implements Lista {
 
     public int tamanho(){
         Noh p = inicio;
+        Noh f = fim;
         int i = 0;
         while (p!=null){ 
             p = p.getProx();
             i++;
         }
+        while(f!= null){
+            f = f.getAnt();
+            i++;
+        }
         return i;
     }
 
-    public void insereFim(Object info) {
+    public void insereFim(Object info) { 
         Noh novo = new Noh(info);
-        Noh ultimo;
-        ultimo = null;
-        if (inicio == null){
+        if (fim == null){
             inicio = novo;
-        }
-        else {
-            for(Noh i=inicio; i != null; i=i.getProx()){
-                ultimo = i;
-            }
-            ultimo.setProx(novo);
+            fim = novo;
+        } else {
+            novo.setAnt(fim);
+            fim.setProx(novo);
+            fim = novo;
         }
     }
 
@@ -58,23 +62,25 @@ public class LSE implements Lista {
         ant = p;
         p = p.getProx();
         }
-        if (p==null){
-            return false;
-        }
-        if (ant==null){
-            inicio = p.getProx();
-        }
-        else{
-            ant.setProx(p.getProx());
-        }
+        if (p==null)
+        return false;
+        if (ant==null)
+        inicio = p.getProx();
+        else
+        ant.setProx(p.getProx());
         return true;
     }
 
     public void imprime(){
         Noh p = inicio;
-        while (p!=null){ 
-            System.out.println(p.getInfo());
+        while (p!=null){
+            System.out.println(p.getInfo().toString());
             p = p.getProx();
+        }
+        Noh f = fim;
+        while (f!=null){
+            System.out.println(f.getInfo().toString());
+            f = f.getAnt();
         }
     }
 }
