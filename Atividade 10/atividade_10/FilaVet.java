@@ -3,22 +3,21 @@ package atividade_10;
 public class FilaVet implements IFila {
     private int nElemFila;
     private int inicio;
-    private Object[] vetFila;
-    private Aluno aluno;
+    private Aluno[] vetFila;
 
     public FilaVet (int tamFila){
         this.nElemFila = 0;
         this.inicio = 0;
-        this.vetFila = new Object[tamFila];
+        this.vetFila = new Aluno[tamFila];
     }
 
-    public boolean add(Object info){ //método que insere na fila
+    public boolean add(Aluno aluno){ //método que insere na fila
         if (this.nElemFila == vetFila.length) {
             System.out.println("Capacidade da fila esgotou");
             return false;
         }
         int fim = (this.inicio + this.nElemFila) % this.vetFila.length;
-        this.vetFila[fim] = info;
+        this.vetFila[fim] = aluno;
         this.nElemFila++;
         return true;
     }
@@ -49,10 +48,8 @@ public class FilaVet implements IFila {
     }
 
     public void print(){
-        int fim = (this.inicio + this.nElemFila) % this.vetFila.length;
-
-        for(int i = inicio; i >= fim; i++){
-            System.out.println(aluno.getNome());
+        for(int i = 0; i < this.nElemFila; i++){
+            System.out.println(this.vetFila[i].getNome());
         }
     }
 }

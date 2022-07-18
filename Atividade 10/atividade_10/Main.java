@@ -10,7 +10,7 @@ public class Main {
         System.out.println(fila.size());
         fila.add(a2);
         System.out.println(fila.size());
-        fila.remove();
+        //fila.remove();
         //fila.remove();
         System.out.println(fila.isEmpty());
         fila.print();
